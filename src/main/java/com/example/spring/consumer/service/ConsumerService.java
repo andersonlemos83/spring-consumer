@@ -1,8 +1,8 @@
 package com.example.spring.consumer.service;
 
-import com.example.spring.consumer.dto.Message;
+import com.example.spring.consumer.dto.MessageQueue;
 
 public interface ConsumerService {
 
-    void action(Message message);
+    void action(MessageQueue messageQueue);
 }

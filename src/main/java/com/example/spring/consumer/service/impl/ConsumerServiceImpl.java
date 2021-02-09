@@ -1,6 +1,6 @@
 package com.example.spring.consumer.service.impl;
 
-import com.example.spring.consumer.dto.Message;
+import com.example.spring.consumer.dto.MessageQueue;
 import com.example.spring.consumer.service.ConsumerService;
 import org.springframework.stereotype.Service;
 
@@ -8,7 +8,11 @@ import org.springframework.stereotype.Service;
 public class ConsumerServiceImpl implements ConsumerService {
 
     @Override
-    public void action(Message message) {
-        System.out.println("Mensagem Consumida: " + message.getText());
+    public void action(MessageQueue messageQueue) {
+// Simulação de erro!
+//        if ("teste-erro".equalsIgnoreCase(messageQueue.getText())) {
+//            throw new AmqpRejectAndDontRequeueException("Erro teste!");
+//        }
+        System.out.println("Mensagem Consumida: " + messageQueue.getText());
     }
 }
